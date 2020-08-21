@@ -9,6 +9,7 @@ import {FaCalendarAlt} from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
+import {animateScroll as scroll } from 'react-scroll'
 
 export default class SingleRoom extends Component {
     constructor(props){
@@ -19,6 +20,10 @@ export default class SingleRoom extends Component {
             slug:this.props.match.params.slug,
             def
         };
+    }
+
+    componentDidMount () {
+        scroll.scrollToTop(0);
     }
 
     handleExpand() {
@@ -98,14 +103,19 @@ export default class SingleRoom extends Component {
                 </section>
 
                 <section className="empty-services">
-                <Link to="/bookhere"
-                    className="book-now-btn"
+
+
+                    <a rel="noopener noreferrer" target="_blank" className="book-now-btn"
+                        href={
+"https://minihotelpms.net/frame/reservas/getAvailability?hotelToken=a41ce7814d16061ac9a951e3bb1c534e&nAdults=1&nChilds=0&nBabies=0&language=HE&rateCode=*ALL&roomId=&from=2020-08-21&to=2020-08-22&minToDate=2020-08-22&nochesPedidas=1&bloggerId=&languageDirection=rtl"
+                        }
                     >
                         הזמן עכשיו!
                         <span className="calander-icon">
                             <FaCalendarAlt/>
                         </span>
-                    </Link>
+                    </a>
+
                 </section>
 
                 <div className="sep"/>

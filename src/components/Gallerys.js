@@ -3,10 +3,6 @@ import Title from './Title';
 import Lightbox from "react-image-lightbox";
 import 'react-image-lightbox/style.css';
 
-import ImageGallery from 'react-image-gallery';
-import Carousel from 'react-responsive-carousel'
-
-
 var viewImages =[];
 var hostelImages =[];
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from "styled-components";
 
 export default class Footer extends Component {
-    componentDidMount() {
+/*     componentDidMount() {
         const s = document.createElement('script');
         s.type = 'text/javascript';
         s.async = true;
@@ -19,23 +19,22 @@ export default class Footer extends Component {
             })();
         `;
         this.instance.appendChild(s);
-    };
+    }; */
     
     render() {
         return (
             <>
-            <div ref={el => (this.instance = el)} />;
+                {/* <div ref={el => (this.instance = el)} />; */}
 
-            <FooterWrapper>
-                <div className="container py-3">
-                    <p style={{
-                        textTransform: 'capitalize',
-                        direction:'ltr'}}>
-                        {new Date().getFullYear()} &copy; by nachala vinograd
-                    </p>
-                </div>
-            </FooterWrapper>
-            
+                <FooterWrapper>
+                    <div className="container py-3">
+                        <p style={{
+                            textTransform: 'capitalize',
+                            direction:'ltr'}}>
+                            {new Date().getFullYear()} &copy; by nachala vinograd
+                        </p>
+                    </div>
+                </FooterWrapper>
             </>
         );
     }

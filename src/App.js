@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 import Location from "./pages/Location";
 import Aboutus from "./pages/Aboutus";
 import Contact from "./pages/Contact";
-import Booking from "./pages/minihotel";
+import Booking from "./pages/Booking";
 import Rooms from "./pages/Rooms";
 import Error from "./pages/Error";
 import SingleRoom from "./pages/SingleRoom";
