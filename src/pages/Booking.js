@@ -46,5 +46,5 @@ export default class minihotel extends Component {
     }
 }
 
-{/* <iframe title="book" width="95%" height="600px" scrolling="auto"
-src="https://new-booking.frontdeskmaster.com?hostelId=AJKOwMNX%2F5UDIgGxDhqQRY6JrRNTS%2BGr"/> */}
+/* <iframe title="book" width="95%" height="600px" scrolling="auto"
+src="https://new-booking.frontdeskmaster.com?hostelId=AJKOwMNX%2F5UDIgGxDhqQRY6JrRNTS%2BGr"/> */
