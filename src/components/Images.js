@@ -7,12 +7,9 @@ import a from '../images/כותרת/n1.jpg'
 import b from '../images/כותרת/n2.jpg'
 import c from '../images/כותרת/n3.jpg'
 import d from '../images/כותרת/n5.jpg'
-
-//import CrossFadeImage from "image-crossfade-react";
 import { useTransition, animated, config } from 'react-spring'
 
-const slides = []
-const ss = [
+const slides = [
     { id: 0, url: a },
     { id: 1, url: b },
     { id: 2, url: c },
@@ -20,13 +17,12 @@ const ss = [
   ]
 function Images (props) {
     const [index, set] = useState(0);
-    const [st, setst] = useState([]);
 
     useEffect(() => {
         setInterval(() => set(state => (state + 1) % 4), 3000);
     }, []);
 
-    const transitions = useTransition(ss[index], item => item.id, {
+    const transitions = useTransition(slides[index], item => item.id, {
         from: { opacity: 0 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
