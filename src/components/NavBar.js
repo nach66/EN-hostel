@@ -8,46 +8,41 @@ import {animateScroll as scroll } from 'react-scroll'
  
 export default class NavBar extends Component {
     state={
-        isOpen: true
+        isOpen: false
     }
     handleToggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
         })
     }
-    componentDidMount () {
-        this.setState({
-            isOpen: true
-        });
-    }
-
     scrollToTop () {
         scroll.scrollToTop(0);
     }
-    scrollTo () {
+    onClickMenuItem = () => {
         scroll.scrollTo(500);
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
     }
 
     render() {
         return (
             <nav className="navbar">
-                <div className="nav-center">
+                <div className="nav-center"  style={{direction: 'ltr'}}>
                     <div className="nav-header">
                         <Link to="/" >                        
                             <img src={logo} onClick={this.scrollToTop} className="nav-logo" alt="logo"/>
                         </Link>
                         <button type="button" onClick={this.handleToggle} className="nav-btn">
                             {this.state.isOpen? 
-                                <FaAlignLeft className="nav-icon"/> :
-                                <FaWindowClose className="nav-icon"/> 
+                                <FaWindowClose className="nav-icon"/> :
+                                <FaAlignLeft className="nav-icon"/>
                             }
                             </button>
                     </div>
 
-                    <ul 
-                    className={this.state.isOpen? "nav-links show-nav" : "nav-links"} 
-                    onClick={this.handleToggle} onClick={this.scrollTo}
-                    >
+                    <ul onClick={this.onClickMenuItem}
+                        className={this.state.isOpen? "nav-links" : "nav-links hide-nav" }>
                         <li>
                             <Link to="/"  className="nav-links" >מי אנחנו</Link>
                         </li>

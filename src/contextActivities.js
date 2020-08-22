@@ -22,7 +22,6 @@ export default class ActivityProvider extends Component {
             content_type: "activ",
             order:"sys.createdAt"
         });
-console.log(response);
 
         let activities = this.formatData(response.items);
         let restActivities = activities.filter(activity => activity.rest === true);

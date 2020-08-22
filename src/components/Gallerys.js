@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import 'react-image-lightbox/style.css';
-
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from 'react-image-gallery';
 
@@ -43,8 +41,9 @@ export default class Gallerys extends Component {
                 <section className="gallery-services">
                     <Title title="תמונות מההוסטל"/> 
                     <ImageGallery 
+                    showNav={false}
+                    showFullscreenButton={false}
                     isRTL={true}
-                    showBullets={true}
                     showPlayButton={false}
                     disableThumbnailScroll={false}
                     items={hostelImages} />
@@ -53,7 +52,8 @@ export default class Gallerys extends Component {
                     <Title title="נופים בסביבה"/> 
                     <ImageGallery 
                     isRTL={true}
-                    showBullets={true}
+                    showNav={false}
+                    showFullscreenButton={false}
                     showPlayButton={false}
                     disableThumbnailScroll={false}
                     items={viewImages} />
