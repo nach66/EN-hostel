@@ -22,7 +22,21 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-
+.languegus {
+  z-index: 1;
+  color: #ecb80e;
+  position: fixed;
+  top: 20px;
+  right: 48%;
+}
+.languegus input{
+width: 7px;
+}
+@media screen and (min-width: 1020px) {
+  .languegus {
+    left: 98%;
+  }
+}
 
 /* services */
 .empty-services {
@@ -162,7 +176,7 @@
   width: 8px;
 }
 /*מסך גדול */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1020px) {
 /*אייקון בין הכפתורי תפריט*/
 .anchor{
     height: 34px;
