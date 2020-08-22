@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {FaFlagUsa, FaFlag, FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
+import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
+import {animateScroll as scroll } from 'react-scroll'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
 import en from '../images/en.png'
 import he from '../images/he.jpg'
-//import ScrollToTop from "../ScrollToTop";
-import {animateScroll as scroll } from 'react-scroll'
- 
+
 export default class NavBar extends Component {
     state={
         isOpen: false
@@ -31,7 +30,7 @@ export default class NavBar extends Component {
         return (
             <>
                 <nav className="navbar">
-                    <div className="nav-center" style={{direction: 'ltr'}}>
+                    <div className="nav-center" style={{direction:'ltr'}}>
                         <div className="nav-header">
                             <Link to="/" >                        
                                 <img src={logo} onClick={this.scrollToTop} className="nav-logo" alt="logo"/>
@@ -47,33 +46,40 @@ export default class NavBar extends Component {
                         <ul onClick={this.onClickMenuItem}
                             className={this.state.isOpen? "nav-links" : "nav-links hide-nav" }>
                             <li>
-                                <Link to="/"  className="nav-links" >מי אנחנו</Link>
+                                <Link to="/"  className="nav-links" >Abuot us</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
-                                <Link to="/rooms" className="nav-links">החדרים שלנו</Link>
+                                <Link to="/rooms" className="nav-links">Our rooms</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li> 
-                            <Link to="/activities" className="nav-links">פעילויות באזור</Link>
+                            <Link to="/activities" className="nav-links">Activity around</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
-                                <Link to="/location" className="nav-links">מצאו אותנו</Link>
+                                <Link to="/location" className="nav-links">Find  <br/> us</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
-                                <Link to="/contact" className="nav-links">דברו אלינו</Link>
+                                <Link to="/contact" className="nav-links">Lets talk</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
                             <Link to="/bookhere" 
                                 className="nav-links"
-                                style={{width: '200px',  
-                                    marginRight: '15PX',                         
+                                style={{width: '170px',  
+                                    marginLeft: '15PX',                    
                                     color: 'var(--mainWhite)',
                                     background : 'var(--mainGreen)'}}
-                                >אפשר כבר להזמין!
+                                >
+                                    <div style={{
+                                    direction: 'ltr',
+                                    fontSize: '1.1rem',  
+                                    paddingTop:'8px',
+                                    }}>
+                                        Book now!
+                                    </div>
                                 <span className="calander-icon" >
                                     <FaCalendarAlt/>
                                 </span>
@@ -88,15 +94,14 @@ export default class NavBar extends Component {
 
                 <div className="languegus">
                     <a rel="noopener noreferrer" 
-                        href='https://tiberiashostel.netlify.app/'
+                        //href='https://tiberiashostel.netlify.app/'
                         >
-                        <img src={he} />
+                        <img src={he} alt="flagi"/>
                     </a>
                     <br/>
                     <a rel="noopener noreferrer"
-                        //href='https://tiberiashostel-en.netlify.app/'
-                        >                        
-                        <img src={en}/>
+                        href='https://tiberiashostel-en.netlify.app/'>                        
+                        <img src={en} alt="flage"/>
                     </a>
                 </div>
             </>

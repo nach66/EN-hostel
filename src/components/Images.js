@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import Hero from '../components/Hero';
