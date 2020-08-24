@@ -340,7 +340,8 @@ div{
   padding: 20px;
   padding-top: 0.4rem;
   height: 280px;
-  width: 270px;
+  width: 290px;
+  border-radius: 50%;
 }
 .abuot article {
   margin: 10px;
