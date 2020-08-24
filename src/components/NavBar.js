@@ -5,7 +5,7 @@ import {animateScroll as scroll } from 'react-scroll'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
 import en from '../images/en.png'
-import he from '../images/he.jpg'
+import he from '../images/he.png'
 
 export default class NavBar extends Component {
     state={
