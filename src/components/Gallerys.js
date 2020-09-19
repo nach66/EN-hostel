@@ -38,26 +38,30 @@ export default class Gallerys extends Component {
     render(){
         return(
             <>
-                <section className="gallery-services">
-                    <Title title="תמונות מההוסטל"/> 
-                    <ImageGallery 
-                    showNav={false}
-                    showFullscreenButton={false}
-                    isRTL={true}
-                    showPlayButton={false}
-                    disableThumbnailScroll={false}
-                    items={hostelImages} />
-                </section>
-                <section className="gallery-services">
-                    <Title title="נופים בסביבה"/> 
-                    <ImageGallery 
-                    isRTL={true}
-                    showNav={false}
-                    showFullscreenButton={false}
-                    showPlayButton={false}
-                    disableThumbnailScroll={false}
-                    items={viewImages} />
-                </section>
+                <div className="gallery-background">                
+                    <section className="gallery-services">
+                        <Title title="THE HOSTEL PHOTOS"/> 
+                        <ImageGallery 
+                        showNav={false}
+                        showFullscreenButton={false}
+                        isRTL={true}
+                        showPlayButton={false}
+                        disableThumbnailScroll={false}
+                        items={hostelImages} />
+                    </section>
+                </div>
+                <div className="gallery-background">                
+                    <section className="gallery-services">
+                        <Title title="THE AREA"/> 
+                        <ImageGallery 
+                        isRTL={true}
+                        showNav={false}
+                        showFullscreenButton={false}
+                        showPlayButton={false}
+                        disableThumbnailScroll={false}                    
+                        items={viewImages} />
+                    </section>
+                </div>
             </>
         )
     }

@@ -22,7 +22,6 @@ export default class ActivityProvider extends Component {
             content_type: "activ",
             order:"sys.createdAt"
         });
-
         let activities = this.formatData(response.items);
         let restActivities = activities.filter(activity => activity.rest === true);
         let waterActivities = activities.filter(activity => activity.water === true);
@@ -46,17 +45,17 @@ export default class ActivityProvider extends Component {
     formatData(items) {
         let tempItems = items.map(item => {
             let id = item.sys.id;
-            let image = item.fields.image.fields.file.url;    
+            let image = item.fields.images.fields.file.url;    
             let activity = { ...item.fields, image, id };
             return activity;
         });
         return tempItems;
     };
 
-    getRoom = slug => {
-        let tempRooms = [...this.state.rooms];
-        const room = tempRooms.find(room => room.slug === slug);
-        return room;
+    getActivity = slug => {
+        let tempActivities = [...this.state.activities];
+        const activity = tempActivities.find(activity => activity.slug === slug);
+        return activity;
     };
 
     render() {
@@ -64,7 +63,7 @@ export default class ActivityProvider extends Component {
             <ActivityContext.Provider 
                 value={{
                 ...this.state, 
-                getRoom: this.getRoom
+                getActivity: this.getActivity
                 }}
             >
                 {this.props.children}                

@@ -62,9 +62,9 @@ export default class OLMap extends Component {
         return (
             <>
                 <section className="services">
-                    <Title title="איך למצוא אותנו?"/>
-                    <h6 style={{fontWeight: '600'}}
-                    >3 דקות מתחנת האוטובוס,3 דקות מקו המים ...</h6>
+                    <Title title="LOCATION & DIRECTIONS"/>
+                    <h6 style={{fontWeight: '600'}}>
+                    3 Minutes from the Bus station. 3 Minutes from the Water line... </h6>
                     <Grid container>
                         <Grid item xs={12}>
                             <div id='map' className="map" >
@@ -72,13 +72,13 @@ export default class OLMap extends Component {
                         </Grid>
                     </Grid>
 
-                    <h6>הוראות להגעה ברכב או בתחבורה ציבורית -</h6>
+                    <h6>Directions to Hostel & Bus Schedules -</h6>
                     
                     <div>
-                        <Link target={"_blank"} to="/tlv" className="btn-primary2 btns-map">מתל אביב</Link>
-                        <Link target={"_blank"} to="/haifa" className="btn-primary2 btns-map">מחיפה</Link>
-                        <Link target={"_blank"} to="/jerusalem" className="btn-primary2 btns-map">מירושלים</Link>
-                        <Link target={"_blank"} to="/nazeret" className="btn-primary2 btns-map">מנצרת</Link>
+                        <Link target={"_blank"} to="/tlv" className="btn-primary2 btns-map">from Tel Aviv</Link>
+                        <Link target={"_blank"} to="/haifa" className="btn-primary2 btns-map">from Haifa</Link>
+                        <Link target={"_blank"} to="/jerusalem" className="btn-primary2 btns-map">from Jerusalem</Link>
+                        <Link target={"_blank"} to="/nazeret" className="btn-primary2 btns-map">from Nazareth</Link>
                     </div >
 
                 </section>

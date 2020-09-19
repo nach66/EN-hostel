@@ -1,13 +1,12 @@
 import React from "react";
 import Activity from "./Activity";
 
-export default function ActivitiesList({ rooms }) {
+export default function ActivitiesList({ activities }) {
 
-    if (rooms.length === 0) {
+    if (activities.length === 0) {
         return (
         <div className="empty-search">
-            <h3>unfortunately no rooms 
-            matched your search parameters</h3>
+            <h3>החיפוש לא עבד. אנא נסה שנית</h3>
         </div>
         );
     }
@@ -15,8 +14,8 @@ export default function ActivitiesList({ rooms }) {
     return (
         <section className="activitylist">
         <div className="activitylist-center">
-            {rooms.map(room => {
-            return <Activity key={room.id} room={room} 
+            {activities.map(activity => {
+            return <Activity key={activity.id} activity={activity} 
             />;
             })}
         </div>

@@ -6,17 +6,14 @@ export default function About() {
     return (
         <>
             <section className="empty-services">
-                <Title title="מי אנחנו?"/> 
-                <div className="abuot">
+                <Title title="ABOUT US"/> 
+                <div className="about">
                     <article className="pic">
                         <img src={c} alt="היי"/>  
                     </article>
                     <article>
-                        <h5>אכסניית טבריה הוקמה בשנת 2015.</h5>
-                        <h5>המיקום שלנו נוח ומרכזי: 3 דקות הליכה מתחנה מרכזית טבריה, 3 דקות הליכה מחופי הכנרת, ו-30 דקות נסיעה ממגוון אטרקציות. יש חניה זמינה, מסעדות, שווקים וחנויות.</h5>
-                        <h5>אנחנו מתאימים למשפחות צעירות, צלמים, אוהבי גלישת רוח בכנרת, רוכבי אופניים, וכל אחד שחפצה נפשו לשכשך במי מעיין קרירים עם נוף עוצר נשימה תחת צל אקליפטוס גדול וותיק.</h5>
-                        <h5>צוות האכסנייה רוצה שתסיימו את החופשה אצלנו עם חיוך ענק, ולכן אנחנו נדאג לספק את התפאורה המושלמת לחופשה מושלמת! מיטה נוחה, תה או קפה בבוקר, מטבח מאובזר, נוף פנורמי לכנרת. ואתם - אתם תדאגו כבר עכשיו לשריין את החדר שלכם לחופשה הבאה בכנרת.</h5>
-                        <h5></h5>
+                        <h5>We are two partners, one an experienced globetrotter the other a native to the region. Realizing there was a missing link to traveling the North of Israel we decided to set up Tiberias Hostel so you could have a Home-Base from which to set out on day trips and return to comfort and safety. Our staff will be happy to help you plan your trip and find your way to the next destination.</h5> 
+                        <h5>We know what travelers need, and we know the best updated places around here and how to get there. </h5>
                     </article>
                 </div>
             </section>

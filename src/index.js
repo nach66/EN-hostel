@@ -5,7 +5,7 @@ import { BrowserRouter as Router} from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import {ActivityProvider} from "./contextActivities";
 import {RoomProvider} from "./contextRooms";
-//import ScrollTo500 from "./ScrollToTop";
+import ScrollToTop from "./ScrollToTop";
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
@@ -13,8 +13,8 @@ ReactDOM.render(
     <ActivityProvider>
         <Router>
           <ParallaxProvider>
-            {/* <ScrollTo500/> */}
-              <App/>
+            <ScrollToTop/>
+            <App/>
           </ParallaxProvider>
         </Router>
     </ActivityProvider>

@@ -10,12 +10,13 @@ export default function ContactForm() {
 
     return (
         <>
-            <section className="empty-services">
-                <Title title="דברו אלינו"/> 
-                <div className="abuot">
-                    <article>
-                        <h6>אל תהססו לפנות אלינו בכל שאלה!</h6>
-                        <h6>שעות הקבלה שלנו הן 8:00-23:00</h6>
+            <section className="services">
+                <Title title="GET IN TOUCH"/> 
+                <div className="about">
+                    <article style={{
+                        paddingTop:'4px'
+                    }}>
+                        <h6>Don't hesitate to contact us with any inquiry, we'll answer at reception hours 8:00-23:00.</h6>
                         <a href="tel:04-679-2611">
                                 <FaPhone style={{ 
                                     padding: '4px',
@@ -47,8 +48,9 @@ export default function ContactForm() {
                                     border: '2px groove var(--offWhite)',
                                     color:'var(--myblue)'}}/>
                             </a>
-                        <h6>כיכר רבין, טבריה. מיקוד: 1411501, תיבת דואר 1514.</h6>
-                        <h6>הכניסה מימין לבנק הבינלאומי.</h6>
+
+                        <h6>Rabin Square, Tiberias. Zip: 1411501. P.O Box 1514.</h6>
+                        <h6>Entrance to the right of the Beinleumi Bank.</h6>
 
                         <div className="contact-icon">
                             <a rel="noopener noreferrer" target={"_blank"} 
@@ -74,54 +76,51 @@ export default function ContactForm() {
                     </article>
 
                     <article>
-                        <h6>אפשר להשאיר הודעה ונחזור אליכם:</h6>
-                        <section className="py-5">
-                            <div className="row">
-                                <div className="col-10 mx-auto col-md-6 my-3">
-                                    <form
-                                        className="mt-5" method="POST"
-                                        action="https://formspree.io/tiberiashostel@gmail.com"
-                                    >
-                                        {/* first */}
+                        <h6>Talk to us:</h6>
+                        <section>
+                            <form className="cform" method="POST"
+                                action="https://formspree.io/tiberiashostel@gmail.com"
+                            >
+                                {/* name */}
                                         <div className="form-group">
                                         <input
                                             type="text"
                                             name="firstName"
                                             className="form-control"
-                                            placeholder="שם"
+                                            placeholder="what's your name?"
                                         />
                                         </div>
-                                        {/* email */}
+                                {/* email */}
                                         <div className="form-group">
                                         <input
                                             type="email"
                                             name="email"
                                             className="form-control"
-                                            placeholder="אימייל"
+                                            placeholder="what's your email?"
                                         />
                                         </div>
-                                        {/* phone */}
+                                {/* phone */}
                                         <div className="form-group">
                                             <input
                                             type="phone"
                                             name="phone"
                                             className="form-control"
-                                            placeholder="מספר טלפון"
+                                            placeholder="what's your phone number?"
                                         />
                                         </div>
-                                        {/* message */}
+                                {/* message */}
                                         <div className="form">
                                         <textarea
                                             name="message"
                                             className="form-control"
-                                            rows="10"
-                                            placeholder="היי שלום, רציתי לדעת..."
+                                            rows="13"
+                                            placeholder="how can we help?"
                                         />
                                         </div>
                                         {/* sumbit */}
                                         <input 
                                             type="submit"
-                                            value="שלח"
+                                            value="submit"
                                             style={{
                                                 position: 'relative',
                                                 bottom:'23px',
@@ -132,9 +131,7 @@ export default function ContactForm() {
                                                 cursor: 'pointer'
                                             }}
                                         />
-                                    </form>
-                                </div>
-                            </div>
+                            </form>
                         </section>
                     </article>
                 </div>

@@ -2,14 +2,15 @@ import React from 'react'
 import def from '../images/def.jpg';
 import PropTypes from 'prop-types';
   
-export default function Activity({room}) {
-    const {name,link,image,description} = room;
+export default function Activity({activity}) {
+    const {name,link,image,description} = activity;
+    console.log(description.content[0].content[0].value);
         return (
             <article className="activity">
                 <div className="img-container-activity">
                     <img src={image || def} alt="act"/>
                     <div className="img__description">
-                        <p>{description}</p>                     
+                        <p>{description.content[0].content[0].value}</p>                     
                         {link && <a rel="noopener noreferrer" target={"_blank"} href={link}> לאתר >> </a> }
                     </div>
                 </div> 
@@ -19,7 +20,7 @@ export default function Activity({room}) {
     }
     
     Activity.prototype={
-        room:PropTypes.shape({
+        activity:PropTypes.shape({
             name:PropTypes.string.isRequired,
             slug:PropTypes.string.isRequired,
             image:PropTypes.arrayOf(PropTypes.string).isRequired

@@ -6,32 +6,27 @@ const RoomContext = React.createContext();
 export default class RoomProvider extends Component {
   state = {
     rooms: [],
-    sortedRooms: [],
+    privateRooms: [],
+    publicRooms: [],
     loading: true,
-    type: 'all',
-    capacity: 1,
-//    price: 0,
-//    minPrice: 0,
-//    maxPrice: 0,
-    minibar: false,
-    tv: false
+    type: 'all'
   };
 
   getData = async () => {
     try {
       let response = await Client.getEntries({
-        content_type: "thostel",
-//        order:"sys.createdAt"
-        order:"fields.capacity"
+        content_type: "room",
+        order:"sys.createdAt"
       });
       let rooms = this.formatData(response.items);
-      //let maxPrice = Math.max(...rooms.map(item => item.price));
+      let privateRooms = rooms.filter(room => room.type === "פרטי");
+      let publicRooms = rooms.filter(room => room.type === "משותף");
+      
       this.setState({
           rooms,
-          sortedRooms: rooms,
-          loading: false,
-//          price: maxPrice,
-//          maxPrice
+          privateRooms,
+          publicRooms,
+          loading: false
         });
     } catch (error) {
       console.log(error);
@@ -56,59 +51,6 @@ export default class RoomProvider extends Component {
       let tempRooms = [...this.state.rooms];
       const room = tempRooms.find(room => room.slug === slug);
       return room;
-    };
-
-    handleChange = event => {
-      const target = event.target;
-      const value = target.type === "checkbox" ? target.checked : target.value;
-      const name = event.target.name;
-  
-      this.setState(
-        {
-          [name]: value
-        },
-        this.filterRooms
-      );
-    };
-
-    filterRooms = () => {
-      let {
-        rooms,
-        type,
-        capacity,
-//        price,
-        minibar,
-        tv
-      } = this.state;
-      // all the rooms
-      let tempRooms = [...rooms];
-      // transform value
-      capacity = parseInt(capacity);
-//      price = parseInt(price);
-
-      // filter by type
-      if (type !== "הכול") {
-        tempRooms = tempRooms.filter(room => room.type === type);
-      }
-  
-      // filter by capacity
-      if (capacity !== 1) {
-        tempRooms = tempRooms.filter(room => room.capacity >= capacity);
-      }
-      // filter by price
-      //tempRooms = tempRooms.filter(room => room.price <= price);
-      // filter by minibar
-      if (minibar) {
-        tempRooms = tempRooms.filter(room => room.minibar === true);
-      }
-      // filter by tv
-      if (tv) {
-        tempRooms = tempRooms.filter(room => room.tv === true);
-      }
-      // change state
-      this.setState({
-        sortedRooms: tempRooms
-      });
     };
 
     render() {
