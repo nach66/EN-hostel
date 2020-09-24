@@ -1,0 +1,24 @@
+import React from "react";
+import Activity from "./Activity";
+
+export default function ActivitiesList({ activities }) {
+
+    if (activities.length === 0) {
+        return (
+        <div className="empty-search">
+            <h3>החיפוש לא עבד. אנא נסה שנית</h3>
+        </div>
+        );
+    }
+
+    return (
+        <section className="activitylist">
+        <div className="activitylist-center">
+            {activities.map(activity => {
+            return <Activity key={activity.id} activity={activity} 
+            />;
+            })}
+        </div>
+        </section>
+    );
+}

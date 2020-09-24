@@ -1,24 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { BrowserRouter as Router} from "react-router-dom"; 
 import * as serviceWorker from "./serviceWorker";
-import {ActivityProvider} from "./contextActivities";
-import {RoomProvider} from "./contextRooms";
-import ScrollToTop from "./ScrollToTop";
-import { ParallaxProvider } from 'react-scroll-parallax';
+import LangRouter from "./LangRouter";
 
 ReactDOM.render(
-  <RoomProvider>
-    <ActivityProvider>
-        <Router>
-          <ParallaxProvider>
-            <ScrollToTop/>
-            <App/>
-          </ParallaxProvider>
-        </Router>
-    </ActivityProvider>
-  </RoomProvider>
+  <ParallaxProvider>
+    <Router>
+      <LangRouter/>
+    </Router>
+  </ParallaxProvider>
 ,
   document.getElementById("root")
 );

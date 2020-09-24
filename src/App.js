@@ -1,34 +1,41 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
-import NavBar from "./components/NavBar";
-import PrivateRooms from "./pages/PrivateRooms";
-import PublicRooms from "./pages/PublicRooms";
-import SingleRoom from "./pages/SingleRoom";
-import Location from "./pages/Location";
-import Aboutus from "./pages/Aboutus";
-import Contact from "./pages/Contact";
-import Booking from "./pages/Booking";
-import Rooms from "./pages/Rooms";
-import Error from "./pages/Error";
-import Home from "./pages/Home";
-import Activities from "./pages/Activities";
+import NavBar from "./hebrew/components/NavBar";
+import Activities from "./hebrew/pages/Activities";
+import PrivateRooms from "./hebrew/pages/PrivateRooms";
+import PublicRooms from "./hebrew/pages/PublicRooms";
+import SingleRoom from "./hebrew/pages/SingleRoom";
+import Location from "./hebrew/pages/Location";
+import Aboutus from "./hebrew/pages/Aboutus";
+import Contact from "./hebrew/pages/Contact";
+import Booking from "./hebrew/pages/Booking";
+import Rooms from "./hebrew/pages/Rooms";
+import Error from "./hebrew/pages/Error";
+import Home from "./hebrew/pages/Home";
 import "./App.css";
 
-function App() {
+function App(props) {
+    let { locale } = props
+    let urlLocale = props.location.pathname.substring(1, 3)
+    if ( locale !== urlLocale ) {
+        props.setLocale(urlLocale)
+        locale = urlLocale
+    }
+    
     return (
         <>
             <NavBar/>
             <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/about" component={Aboutus}/>
-                <Route exact path="/rooms" component={Rooms}/>
-                <Route exact path="/public" component={PublicRooms}/>
-                <Route exact path="/private" component={PrivateRooms}/>
-                <Route exact path="/Activities" component={Activities}/>
-                <Route exact path="/location" component={Location}/>
-                <Route exact path="/contact" component={Contact}/>
-                <Route exact path="/bookhere" component={Booking}/>
-                <Route exact path="/rooms/:slug" component={SingleRoom}/>
+                <Route exact path={"/" + locale + "/"} component={Home}/>
+                <Route exact path={"/" + locale + "/about"} component={Aboutus}/>
+                <Route exact path={"/" + locale + "/rooms"} component={Rooms}/>
+                <Route exact path={"/" + locale + "/public"} component={PublicRooms}/>
+                <Route exact path={"/" + locale + "/private"} component={PrivateRooms}/>
+                <Route exact path={"/" + locale + "/Activities"} component={Activities}/>
+                <Route exact path={"/" + locale + "/location"} component={Location}/>
+                <Route exact path={"/" + locale + "/contact"} component={Contact}/>
+                <Route exact path={"/" + locale + "/bookhere"} component={Booking}/>
+                <Route exact path={"/" + locale + "/rooms/:slug"} component={SingleRoom}/>
                 
                 <Route exact path="/jerusalem" component={() => { 
                     window.location.href = 

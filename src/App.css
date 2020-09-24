@@ -22,10 +22,13 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.lang{
+  direction: ltr;
+}
+
 /*search*/
 .comp{
   background-color: var(--mainGreen);
-  width: 98vw;
 }
   .book-now-comp{
     margin:auto;
@@ -38,7 +41,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .book-now-comp h1{
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 6px;
   }
   .react-datepicker-wrapper{
@@ -49,7 +52,7 @@
   .react-datepicker__input-container input {
       width: 100%;
       height: 35px;
-      padding-left: 5px;
+      padding-right: 5px;
       border-radius: 2px;
       border: 1px solid var(--primaryColor);
       background-color: var(--mainWhite);
@@ -71,7 +74,7 @@
       color: var(--mainBlack);
       background: var(--primaryColor);
       padding: 0.4rem 0.9rem;
-      border: 1px solid var(--primaryColor);
+      border: none;
       transition: var(--mainTransition);
       border-radius: 2px;
       font-size: medium;
@@ -80,8 +83,8 @@
       cursor: pointer;
   }
   .book:hover {
-  box-shadow: 0 0.5em 0.5em -0.2em var(--mainWhite) ;
-  transform: translateY(-0.25em);
+  box-shadow: 0 0.1em 0.9em -0.4em var(--mainWhite) ;
+  transform: translateY(-0.03em);
   }
 /*מסך קטן*/
 @media screen and (max-width: 850px) {
@@ -117,6 +120,10 @@
   .react-datepicker-wrapper{
     width: 150px;
   }
+  .book{
+    background: rgb(0, 88, 139);
+    color: var(--mainWhite);
+  }
 }
 /*הטלפון שלי*/
 @media screen and (max-width: 480px) {
@@ -140,9 +147,9 @@
 .languegus input{
 width: 7px;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1020px) {
   .languegus {
-    left: 97%;
+    left: 98%;
   }
 }
 
@@ -165,11 +172,11 @@ width: 7px;
 }
 .services-center {
   width: 80vw;
-  padding: 30px;
+  padding: 20px;
   display: grid;
   grid-row-gap: 2rem;
   grid-column-gap: 5rem;  
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 .gallery-background {
   margin: auto;
@@ -188,6 +195,7 @@ width: 7px;
   .services-center {
     width: 90vw;
     max-width: 1170px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }.gallery-services {
     width: 70vw;
   }
@@ -197,17 +205,17 @@ width: 7px;
   margin: auto;
 }
 /* אייקונים שירותים */
-.services span {
-  background-color: var(--mainWhite);
+.icon-services {
+  background-color: var(--offWhite);
   color: var(--mainBlack);
-  padding: 0.5rem 0.5rem 0.2rem;
+  padding: 0.9rem 0.9rem 0.6rem;
   border-radius: 50%;
   font-size: 1rem;
 }
-.services h6 {
+.h6-services {
   font-weight: 600;  
   font-size: 15px;
-  margin-top: 5px;
+  margin-top: 15px;
   letter-spacing: 2px;
 }
 /*end of services */
@@ -298,7 +306,7 @@ width: 7px;
 }
 
 /*מסך גדול */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 910px) {
   /*אייקון בין הכפתורי תפריט*/
 .anchor{
     height: 34px;
@@ -343,9 +351,7 @@ width: 7px;
 .sep{
   width: 49%;
   height: 35px;
-  background-position:center;
-  /* width: 15%; */
-  /* height: 25px; */
+  background-position: center;
   background-image: url("./images/icons/mirror.png");
   margin: 1rem auto;
 }
@@ -371,6 +377,7 @@ body {
   line-height: 1.4;
 }
 h1 {
+  direction: rtl;
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.5em;
@@ -378,30 +385,38 @@ h1 {
 h2 {
   padding: 10px;
   text-align: center;
+  direction: rtl;
   font-size: 2em;
   margin-bottom: 0.75em;
 }
 h3 {
+  direction: rtl;
   font-size: 1.5em;
   line-height: 1;
   margin-bottom: 1em;
 }
 h4 {
+  direction: rtl;
   font-size: 1.2em;
   line-height: 1;
   margin-bottom: 1em;
 }
 h5 {
   text-align: center;
+  direction: rtl;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 0.5em;
 }
 h6 {
+  direction: rtl;
   font-size: 1em;
   margin-bottom: 0.5em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+}
+div{
+  direction: rtl;
 }
 .loading {
   text-transform: capitalize;
@@ -451,14 +466,13 @@ h6 {
 .about h5 {
   letter-spacing: 2px;
   font-weight: 500;
-  text-align: left;
-  padding-top: 20px;
-  padding-right: 20px;
+  text-align: right;
 }
 .about img{
   padding: 20px;
-  height: 240px;
-  width: 250px;
+  padding-top: 0.4rem;
+  height: 280px;
+  width: 290px;
   border-radius: 50%;
 }
 .about article {
@@ -522,9 +536,9 @@ h6 {
   z-index: -1;
   position: absolute;
   top: 0;
-  width: 98vw;
+  width: 100vw;
   height: calc(100vh - 150px);
-  background-size: cover;
+  background: center/cover no-repeat;
   will-change: opacity;
   /* 
   margin-right: 9vw;
@@ -545,26 +559,34 @@ h6 {
 .roomsHero {
   background-image: url("./images/def.jpg");
 }
+@media screen and (max-width: 540px) {
+  .bg {
+    height: calc(100vh - 350px);
+  }
+  .defaultHero, .roomsHero {
+    min-height: calc(100vh - 416px);
+  }
+}
 /* Banner */
 .banner {
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   text-align: center;
+  padding-top: 10px;
   color: var(--mainWhite);
-  background: rgba(0, 0, 0, 0.377);
+  background: rgba(0, 0, 0, 0.507);
   letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
   font-size: 1.5rem;
 }
+.banner p {
+  font-size: 1.2rem;
+}
 .banner div {
   width: 7rem;
   height: 3px;
   background-color: var(--primaryColor);
-  margin: 1.7rem auto;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 1.5rem auto;
 }
 /*end of Banner */
 
@@ -711,23 +733,43 @@ h6 {
 }
 /* end of roomlist */
 
-/*  rooms fitler*/
-.filter-container {
-  padding: 2rem 0;
-}
-.filter-form {
-  padding-top: 10px;
-  width: 60vw;
+/*rooms*/
+.btn-room-contain {
+  position: relative;
+  width: 70vw;
+  left: 3px;
   margin: auto;
   display: grid;
-  grid-row-gap: 2rem;
   grid-column-gap: 2rem;
   grid-template-columns: 1fr 1fr;
 }
-.filter-btns {
-    width: 100%;
-    margin: auto;
-    text-align: center;
+.room-btns {
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: xx-large;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 3%;
+  box-shadow: 0 0.5em 0.4em -0.4em #050a5c;
+}
+@media screen and (max-width: 900px) {
+  .room-btns {
+    font-size: x-large;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn-room-contain {
+    width: 90vw;
+    left: 5px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .btn-room-contain {
+    width: 90vw;
+    left: 15px;
+  }
 }
 .form-group {
   text-transform: capitalize;
