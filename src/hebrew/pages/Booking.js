@@ -4,15 +4,13 @@ import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
 import Title from '../components/Title';
 import Loading from '../components/Loading';
+import LangButtons from '../LangButtons'
 
-export default class minihotel extends Component {
+export default class Booking extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
+        state = {
             isloading: true
         }
-    }
 
     componentDidMount() {
         setTimeout(function() {
@@ -26,6 +24,7 @@ export default class minihotel extends Component {
         console.log(this.state.idloading);
         return (
             <>
+                <LangButtons {...this.props} />
                 <div className="sep"/>
                     <section className="empty-services">
                         <Title title="הזמנה"/>

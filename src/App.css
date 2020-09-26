@@ -141,8 +141,9 @@
 .languegus {
   color: #ecb80e;
   position: fixed;
-  top: 20px;
+  top: 23px;
   right: 48%;
+  z-index: 1;
 }
 .languegus input{
 width: 7px;
@@ -171,8 +172,9 @@ width: 7px;
   box-shadow: 0 0.4em 0em -0.3em var(--darkGrey) ;
 }
 .services-center {
-  width: 80vw;
-  padding: 20px;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
   display: grid;
   grid-row-gap: 2rem;
   grid-column-gap: 5rem;  
@@ -193,7 +195,6 @@ width: 7px;
 }
 @media screen and (min-width: 940px) {
   .services-center {
-    width: 90vw;
     max-width: 1170px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }.gallery-services {
@@ -559,17 +560,9 @@ div{
 .roomsHero {
   background-image: url("./images/def.jpg");
 }
-@media screen and (max-width: 540px) {
-  .bg {
-    height: calc(100vh - 350px);
-  }
-  .defaultHero, .roomsHero {
-    min-height: calc(100vh - 416px);
-  }
-}
 /* Banner */
 .banner {
-  padding: 1rem;
+  padding: 1rem 2.5rem;
   text-align: center;
   padding-top: 10px;
   color: var(--mainWhite);
@@ -581,14 +574,32 @@ div{
 }
 .banner p {
   font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 .banner div {
   width: 7rem;
   height: 3px;
   background-color: var(--primaryColor);
-  margin: 1.5rem auto;
+  margin: 1rem auto;
 }
 /*end of Banner */
+@media screen and (max-width: 540px) {
+  .bg {
+    height: calc(100vh - 350px);
+  }
+  .defaultHero, .roomsHero {
+    min-height: calc(100vh - 416px);
+  }
+  .banner {
+  padding: 0.5rem 1rem;
+  }
+  .banner p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+}
+
+
 
 /* Title */
 .section-title {
@@ -746,7 +757,7 @@ div{
 .room-btns {
   font-weight: 700;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: xx-large;
+  font-size: 1.5rem;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -754,23 +765,39 @@ div{
   border-radius: 3%;
   box-shadow: 0 0.5em 0.4em -0.4em #050a5c;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 555px) {
+  .btn-room-contain {
+    width: 80vw;
+  }
   .room-btns {
-    font-size: x-large;
+    font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .btn-room-contain {
-    width: 90vw;
-    left: 5px;
+    left:3px;
+  }
+  .room-btns {
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 380px) {
   .btn-room-contain {
-    width: 90vw;
-    left: 15px;
+    left: 5px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 .form-group {
   text-transform: capitalize;
 }

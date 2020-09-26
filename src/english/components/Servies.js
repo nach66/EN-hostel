@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import {FaUtensils,FaAngellist,FaParking, FaSmileBeam} 
-    //FaAnchor,FaPuzzlePiece,FaDice,FaBook,FaTv,FaCoffee,FaRegMoneyBillAlt,FaWifi
+import {FaUtensils,FaAngellist, FaMapMarked, FaRegSmileBeam} 
 from 'react-icons/fa';
 
 export default class Servies extends Component {
@@ -9,64 +8,28 @@ export default class Servies extends Component {
         services: [
             {
                 icon:<FaUtensils/>,
-                title:"מטבח מאובזר"
+                title:"Equipped and homely shared kitchen"
             },
             {
                 icon:<FaAngellist/>,
-                title:"גג עם נוף פנורמי לכנרת"
+                title:"Rooftop with stunning views"
             },
             {
-                icon:<FaSmileBeam/>,
-                title:"צוות מנוסה ואדיב"
+                icon:<FaRegSmileBeam/>,
+                title:"Awesome team"
             },
             {
-                icon:<FaParking/>,
-                title:"חניה חינם"
-            },
-            /* 
-            {
-                icon:<FaAnchor/>,
-                title:"אטרקציות במחירים מוזלים"
-            },           
-            {
-                icon:<FaWifi/>,
-                title:"WiFi"
-            },            
-            {
-                icon:<FaRegMoneyBillAlt/>,
-                title:"כספומט"
-            },            
-            {
-                icon:<FaDice/>,
-                title:"חדר פנאי עם סנוקר"
-            },
-            {
-                icon:<FaTv/>,
-                title:"טרקלין טלוויזיה"
-            },
-            {
-                icon:<FaBook/>,
-                title:"ספריה"
-            },
-            {
-                icon:<FaPuzzlePiece/>,
-                title:"משחקי לוח ופאזלים"
-            },
-            {
-                icon:<FaCoffee/>,
-                title:"פינת קפה"
-            },*/
+                icon:<FaMapMarked/>,
+                title:"Central location"
+            }
         ]
     }
     render() {
         return (
             <>
-            <section className="empty-services">
-                <Title title="אז איך זה עובד?"/> 
-                <h6>אנחנו באכסניית טבריה מציעים יחידות אירוח מודרניות ונעימות, למטיילים בתקציב מוגבל.</h6>
-                <h6>החדרים הפרטיים שלנו יכולים להכיל 2-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
-                <h6>יש לנו גם חדרים משותפים, שמכילים 8-10 אנשים. לחדרים המשותפים יש שירותים ומקלחות מחוץ לחדר.</h6>
-                <h6>תוכלו ליהנות אצלנו ממטבח משותף מאובזר וביתי, חדר פנאי עם סנוקר, משחקי לוח ופאזלים, וטרקלין טלוויזיה. אינטרנט אלחוטי זמין בחינם בכל השטח, ויש טרסת גג עם נוף מטריף לכנרת ולהרי הגולן. ברים, מסעדות וחופים נמצאים כולם בסביבה הקרובה, והצוות האדיר שלנו תמיד יוכל להמליץ לכם על המסלולים הטובים ביותר לטיולים באזור!</h6>
+            <section className="empty-services lang">
+                <Title className="lang" title="So, how does it work?"/>
+                <h6 className="lang">We at the Tiberias Hostel offer modern and pleasant accommodation units, for travelers on a limited budget. With us you can enjoy a hang-out room with pool table, board games and puzzles, a TV lounge, and free Wi-Fi. Bars, restaurants and beaches are all nearby, and our great staff will always be able to recommend the best hiking trails in the area!</h6>
 
                 <div className="services-center">
                     {this.state.services.map(

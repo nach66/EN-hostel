@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import About from '../components/About'
 import Gallerys from '../components/Gallerys'
 import Search from '../components/Search'
+import LangButtons from '../LangButtons'
 
-export default class Aboutus extends Component {
-    render() {
+export default function Aboutus(props) {
         return (
             <>
+                <LangButtons {...props} />
                 <br/>
                 <Search/>
                 <div className="sep"/>
@@ -20,5 +21,4 @@ export default class Aboutus extends Component {
                 <Footer/>
             </>
         );
-    }
 }

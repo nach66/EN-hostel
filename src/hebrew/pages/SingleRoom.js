@@ -7,12 +7,13 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer'
 import def from '../images/def.jpg';
 import {RoomContext} from '../contextRooms';
+import LangButtons from '../LangButtons'
 
 export default class SingleRoom extends Component {
     constructor(props){
         super(props);
         this.state={
-            slug:this.props.match.params.slug,
+            slug:this.props.match.params[0].substring(6),
             def
         };
     }
@@ -40,9 +41,10 @@ export default class SingleRoom extends Component {
             
         return (
             <>
+                <LangButtons {...this.props} />
                 <StyledHero img={mainImg || def}>
                     <Banner title={name}>
-                        <Link to="/rooms" className="btn-primary2">
+                        <Link to="/he/rooms" className="btn-primary2">
                             בחזרה לחדרים
                         </Link>
                     </Banner>

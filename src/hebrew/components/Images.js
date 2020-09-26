@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Banner from '../components/Banner';
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Hero from '../components/Hero';
 import { useTransition, animated, config } from 'react-spring'
 import a from '../images/כותרת/b1.jpg'
@@ -31,7 +31,7 @@ function Images (props) {
             {transitions.map(({ item, props, key }) => (
             <animated.div
                 key={key}
-                class="bg"
+                className="bg"
                 style={{ ...props, backgroundImage: `url(${item.url}` }}
             />
             ))}
@@ -39,9 +39,9 @@ function Images (props) {
                 <Hero>
                     <Banner title={props.title}
                             subtitle={props.subtitle}>
-                            {/*  <Link to={props.link} className="btn-primary2">
+                            <Link to={props.link} className="btn-primary2">
                                 {props.link_text}
-                            </Link> */}
+                            </Link>
                     </Banner>
                 </Hero>
             </div>

@@ -4,8 +4,9 @@ import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
 import Title from '../components/Title';
 import Loading from '../components/Loading';
+import LangButtons from '../LangButtons'
 
-export default class minihotel extends Component {
+export default class Booking extends Component{
 
     constructor(props) {
         super(props);
@@ -26,6 +27,7 @@ export default class minihotel extends Component {
     render() {
         return (
             <>
+                <LangButtons {...this.props} />
                 <div className="sep"/>
                     <section className="empty-services">
                         <Title title="BOOK  YOUR STAY NOW ON OUR SITE!"/>

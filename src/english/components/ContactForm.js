@@ -87,7 +87,7 @@ export default function ContactForm() {
                                 action="https://formspree.io/tiberiashostel@gmail.com"
                             >
                                 {/* name */}
-                                        <div className="form-group">
+                                        <div className="form-group lang">
                                         <input
                                             type="text"
                                             name="firstName"
@@ -96,7 +96,7 @@ export default function ContactForm() {
                                         />
                                         </div>
                                 {/* email */}
-                                        <div className="form-group">
+                                <div className="form-group lang">
                                         <input
                                             type="email"
                                             name="email"
@@ -105,7 +105,7 @@ export default function ContactForm() {
                                         />
                                         </div>
                                 {/* phone */}
-                                        <div className="form-group">
+                                <div className="form-group lang">
                                             <input
                                             type="phone"
                                             name="phone"
@@ -114,7 +114,7 @@ export default function ContactForm() {
                                         />
                                         </div>
                                 {/* message */}
-                                        <div className="form">
+                                        <div className="form lang">
                                         <textarea
                                             name="message"
                                             className="form-control"

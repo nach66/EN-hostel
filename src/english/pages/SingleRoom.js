@@ -8,12 +8,13 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer'
 import {RoomContext} from '../contextRooms';
 import def from '../images/def.jpg';
+import LangButtons from '../LangButtons'
 
 export default class SingleRoom extends Component {
     constructor(props){
         super(props);
         this.state={
-            slug:this.props.match.params.slug,
+            slug:this.props.match.params[0].substring(6),
             def
         };
     }
@@ -22,14 +23,12 @@ export default class SingleRoom extends Component {
     render() {        
         const { getRoom } = this.context;
         const room = getRoom(this.state.slug);
-
-        console.log(room);
         if (!room){
             return (
                 <div className="error">
-                    <h3>לצערנו אין חדר כזה</h3>
-                    <Link to="/rooms" className="btn-primary2">
-                        בחזרה לחדרים
+                    <h3 className="lang">something wrong...</h3>
+                    <Link to="/en/rooms" className="btn-primary2">
+                        back to rooms
                     </Link>
                 </div>
             );
@@ -40,17 +39,18 @@ export default class SingleRoom extends Component {
             
         return (
             <>
+                <LangButtons {...this.props} />
                 <StyledHero img={mainImg || def}>
                     <Banner title={name}>
-                        <Link to="/rooms" className="btn-primary2">
-                            בחזרה לחדרים
+                        <Link to="/en/rooms" className="btn-primary2">
+                            back to rooms
                         </Link>
                     </Banner>
                 </StyledHero>
                 <div className="sep"/>
 
                 <section className="room-section">
-                    <div className="container" style={{marginTop: '70px'}}>
+                    <div className="container lang" style={{marginTop: '70px'}}>
                         {defuldImg.map((item,index)=>{
                             return ( <div
                                 key={index} alt="pic"
@@ -60,12 +60,12 @@ export default class SingleRoom extends Component {
                         })}
                     </div>
                 </section>
-                <section className="room-section">
-                    <h3>פרטים</h3>
+                <section className="room-section lang">
+                    <h3 className="lang">details</h3>
                     <p>{description.content[0].content[0].value}</p>
                 </section>
-                <section className="room-section">
-                    <h3>מידע ומתקנים</h3>
+                <section className="room-section lang">
+                    <h3 className="lang">extras</h3>
                     <ul className="extras">
                         {extras.map((item,index)=>{
                             return<li key={index}>
@@ -75,11 +75,13 @@ export default class SingleRoom extends Component {
                     </ul>
                 </section>
 
-                <section className="empty-services">                    
+                <section className="empty-services lang">                    
                     <Link to="/bookhere" 
                             className="book-now-btn"
-                            >הזמן עכשיו!
-                        <span className="calander-icon">
+                            >book now!
+                        <span className="calander-icon"
+                            style={{marginLeft:'2px'}}
+                        >
                             <FaCalendarAlt/>
                         </span>
                     </Link>

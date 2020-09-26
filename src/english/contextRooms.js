@@ -18,7 +18,6 @@ export default class RoomProvider extends Component {
         content_type: "room",
         order:"sys.createdAt"
       });
-      console.log('e '+response);
       let rooms = this.formatData(response.items);
       let privateRooms = rooms.filter(room => room.type === "פרטי");
       let publicRooms = rooms.filter(room => room.type === "משותף");

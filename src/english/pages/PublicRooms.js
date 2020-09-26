@@ -5,8 +5,9 @@ import Loading from '../components/Loading'
 import Footer from '../components/Footer'
 import Title from '../components/Title'
 import {RoomConsumer} from '../contextRooms';
+import LangButtons from '../LangButtons'
 
-export default function PublicRooms() {
+export default function PublicRooms(props) {
     return (
         <RoomConsumer>
             {value => {
@@ -16,8 +17,12 @@ export default function PublicRooms() {
                 }                    
                 return (
                     <>
+                        <LangButtons {...props} />
                         <div className="sep"/>
-                        <Title title="חדרים משותפים" />
+                        <Title title="Dormitories" />
+                        <section className="empty-services">
+                            <h6 className="lang">Our shared dormitories can accommodate 8-10 people. The shared dormitories have toilets and showers shared outside the room.</h6>
+                        </section>
                         <RoomsList rooms={publicRooms}/>
                         <ContactForm/>
                         <Footer/>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
-import LangButtons from '../LangButtons'
 
 export default class NavBar extends Component {
     state={
@@ -72,8 +71,6 @@ export default class NavBar extends Component {
                             </Link>
                             </li>
                         </ul>
-
-                        <LangButtons/> 
                     </div>     
                 </nav>
             </>

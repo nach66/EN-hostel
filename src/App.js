@@ -26,16 +26,39 @@ function App(props) {
         <>
             <NavBar/>
             <Switch>
-                <Route exact path={"/" + locale + "/"} component={Home}/>
-                <Route exact path={"/" + locale + "/about"} component={Aboutus}/>
-                <Route exact path={"/" + locale + "/rooms"} component={Rooms}/>
-                <Route exact path={"/" + locale + "/public"} component={PublicRooms}/>
-                <Route exact path={"/" + locale + "/private"} component={PrivateRooms}/>
-                <Route exact path={"/" + locale + "/Activities"} component={Activities}/>
-                <Route exact path={"/" + locale + "/location"} component={Location}/>
-                <Route exact path={"/" + locale + "/contact"} component={Contact}/>
-                <Route exact path={"/" + locale + "/bookhere"} component={Booking}/>
-                <Route exact path={"/" + locale + "/rooms/:slug"} component={SingleRoom}/>
+                <Route path={"/" + locale + "/"} exact render={propRouter => 
+                    <Home {...propRouter} {...props} />
+                } />
+                <Route path={"/" + locale + "/about"} exact render={propRouter => 
+                    <Aboutus {...propRouter} {...props} />
+                } />                
+                <Route path={"/" + locale + "/rooms"} exact render={propRouter => 
+                    <Rooms {...propRouter} {...props} />
+                } />                
+                <Route path={"/" + locale + "/public"} exact render={propRouter => 
+                    <PublicRooms {...propRouter} {...props} />
+                } />                
+                <Route path={"/" + locale + "/private"} exact render={propRouter => 
+                    <PrivateRooms {...propRouter} {...props} />
+                } />
+                <Route path={"/" + locale + "/Activities"} exact render={propRouter => 
+                    <Activities {...propRouter} {...props} />
+                } />                
+                <Route path={"/" + locale + "/location"} exact render={propRouter => 
+                    <Location {...propRouter} {...props} />
+                } />
+                <Route path={"/" + locale + "/contact"} exact render={propRouter => 
+                    <Contact {...propRouter} {...props} />
+                } />    
+                <Route path={"/" + locale + "/bookhere"} exact render={propRouter => 
+                    <Booking {...propRouter} {...props} />
+                } />   
+                <Route path={"/" + locale + "/rooms/:slug"} exact render={propRouter => 
+                    <SingleRoom {...propRouter} {...props} />
+                } />
+                <Route exact render={propRouter => 
+                    <Error {...propRouter} {...props} />
+                } />
                 
                 <Route exact path="/jerusalem" component={() => { 
                     window.location.href = 
@@ -58,7 +81,6 @@ function App(props) {
                     return null;
                 }} />
 
-                <Route component={Error}/>
             </Switch>
         </>
     );

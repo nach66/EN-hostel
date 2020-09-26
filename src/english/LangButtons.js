@@ -19,7 +19,6 @@ export default class LangButtons extends Component {
                             >
                             <img src={he} alt="flagi"/>
                         </div>
-                        <br/>
                         <div rel="noopener noreferrer"
                             onClick={() => this.setLocale('en')}
                             >                        

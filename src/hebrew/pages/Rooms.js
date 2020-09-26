@@ -4,10 +4,12 @@ import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
 import Services from '../components/Servies'
 import {Link} from 'react-router-dom'
+import LangButtons from '../LangButtons'
 
-export default function Rooms() {
+export default function Rooms(props) {
     return (
         <>
+            <LangButtons {...props} />
             <div className="sep"/>
             <Services/>
             <RoomsFilter/>
@@ -23,12 +25,12 @@ function RoomsFilter() {
         <section className="btn-room-contain">
                 <Link className="btn-primary2 room-btns"
                     style={{
-                        paddingLeft: '23px',
-                        paddingRight: '23px'
+                        paddingLeft: '24px',
+                        paddingRight: '24px'
                     }}
-                    to="/private" >לחדרים הפרטיים</Link>
+                    to="/he/private" >לחדרים הפרטיים</Link>
                 <Link className="btn-primary2 room-btns"
-                    to="/public" >לחדרים המשותפים</Link>
+                    to="/he/public" >לחדרים המשותפים</Link>
         </section>
     );
 }

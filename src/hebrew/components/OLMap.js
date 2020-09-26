@@ -50,9 +50,9 @@ export default class OLMap extends Component {
             }),
             style: new Style({
                 image: new Icon({
-                  src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+                    src: 'https://openlayers.org/en/latest/examples/data/icon.png'
                 })
-              })
+            })
         });
         map.addLayer(layer);
     }
