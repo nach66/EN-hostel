@@ -14,7 +14,7 @@ export default function Room({room}) {
                     Details
                 </Link>           
             </div> 
-            <p className="room-info">{name}</p>   
+            <p className="room-info lang">{name}</p>   
         </article>
     );
 }

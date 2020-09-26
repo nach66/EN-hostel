@@ -15,12 +15,12 @@ export default class RoomProvider extends Component {
   getData = async () => {
     try {
       let response = await Client.getEntries({
-        content_type: "room",
+        content_type: "en_room",
         order:"sys.createdAt"
       });
       let rooms = this.formatData(response.items);
-      let privateRooms = rooms.filter(room => room.type === "פרטי");
-      let publicRooms = rooms.filter(room => room.type === "משותף");
+      let privateRooms = rooms.filter(room => room.type === "private");
+      let publicRooms = rooms.filter(room => room.type === "public");
       
       this.setState({
           rooms,

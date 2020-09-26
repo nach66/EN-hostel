@@ -14,13 +14,13 @@ export default function ActivitiesContainer() {
                 }
                 return (
                     <>
-                        <Title title="פעילויות מים"/> 
+                        <Title title="Water activities"/> 
                         <ActivitiesList activities={waterActivities}/>
                         <div className="sep"/>
-                        <Title title="מקומות מרבץ"/> 
+                        <Title title="Resting place"/> 
                         <ActivitiesList activities={restActivities}/>
                         <div className="sep"/>
-                        <Title title="אטרקציות שוות"/> 
+                        <Title title="Special attractions"/> 
                         <ActivitiesList activities={attractionActivities}/>
                     </>
                 );

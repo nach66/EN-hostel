@@ -19,7 +19,7 @@ export default class ActivityProvider extends Component {
         try {
 
         let response = await Client.getEntries({
-            content_type: "activ",
+            content_type: "en_activ",
             order:"sys.createdAt"
         });
         let activities = this.formatData(response.items);

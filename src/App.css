@@ -884,7 +884,7 @@ div{
 .img-container-activity img {
   border-radius: 10px;
   width: 100%;
-  height: 290px;
+  height: 310px;
   display: block;
   transition: var(--mainTransition);
 }

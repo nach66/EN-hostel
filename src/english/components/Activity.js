@@ -9,9 +9,14 @@ export default function Activity({activity}) {
             <article className="activity">
                 <div className="img-container-activity">
                     <img src={image || def} alt="act"/>
-                    <div className="img__description">
+                    <div className="img__description lang">
                         <p>{description.content[0].content[0].value}</p>                     
-                        {link && <a rel="noopener noreferrer" target={"_blank"} href={link}> לאתר >> </a> }
+                        {link && <a
+                                    rel="noopener noreferrer" 
+                                    target={"_blank"} 
+                                    href={link}
+                                > to the website >>
+                                </a> }
                     </div>
                 </div> 
                 <p className="activity-name">{name}</p>   

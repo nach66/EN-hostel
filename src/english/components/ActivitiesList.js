@@ -6,7 +6,7 @@ export default function ActivitiesList({ activities }) {
     if (activities.length === 0) {
         return (
         <div className="empty-search">
-            <h3>החיפוש לא עבד. אנא נסה שנית</h3>
+            <h3>something wrong</h3>
         </div>
         );
     }

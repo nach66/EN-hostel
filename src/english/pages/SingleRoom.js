@@ -76,7 +76,7 @@ export default class SingleRoom extends Component {
                 </section>
 
                 <section className="empty-services lang">                    
-                    <Link to="/bookhere" 
+                    <Link to="/en/bookhere" 
                             className="book-now-btn"
                             >book now!
                         <span className="calander-icon"

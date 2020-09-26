@@ -47,7 +47,8 @@ export default class Booking extends Component{
                         {this.state.isloading && <Loading/>}
 
                         <iframe id="be_iframe" frameborder="1" scrolling="yes" title="booking"
-                                    style={{width: '100%', height:'500px', padding:'30px', overflow: 'hidden'}} 
+                                    style={{width: '100%', height:'2700px', 
+                                    padding:'30px', overflow: 'hidden'}}  
                                     onload="window.scrollTo(0,0)"
                                     src="https://minihotelpms.net/frame/reservas?hotelToken=a41ce7814d16061ac9a951e3bb1c534e||from=||to=||nAdults=1||nChilds=0||nBabies=0||start_date=||end_date=||language=EN||currency=ILS||rateCode=*ALL||roomId=||bloggerId=">
                         </iframe>
