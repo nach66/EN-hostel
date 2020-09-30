@@ -22,36 +22,89 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.lang{
-  direction: ltr;
+@keyframes customEnterAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes customLeaveAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.customOverlay {
+  background:rgba(17, 16, 16, 0.808);
+}
+.customModal {
+  max-width: 450px;
+  width: 100%;
 }
 
 /*search*/
 .comp{
   background-color: var(--mainGreen);
+  display: flex;
+  margin: auto;
+  width: 100%;
 }
-  .book-now-comp{
-    margin:auto;
-    width: 85%;
-    height: 100px;
-    padding: 10px;
-    padding-top: 33px;
+.h1b{
+  padding-top: 7px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  display: none;
+  padding-right: 15px;
+  color:  rgb(0, 88, 139);
+  text-decoration: double;
+}
+.best_price{
+  background-image: url("./images/icons/bb.png");
+  background-size: cover;
+  position: relative;
+  height: 142px;
+  width: 160px;
+  right: 40px;
+  margin: 6px;
+}
+.sbest_price{
+  background-image: url("./images/icons/bb.png");
+  background-size: cover;
+  position: absolute;
+  height: 125px;
+  width: 137px;
+  top: 12px;
+  left: 39vw;
+  display: none;
+}
+
+.book-now-comp{
+    position: relative;
+    padding-top: 12px;
+    height: 110px;
+    width: 70%;
+    right: 15px;
     display: grid; 
     grid-column-gap: 1rem; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-  .book-now-comp h1{
-    font-size: 18px;
-    padding-top: 6px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: auto;
   }
   .react-datepicker-wrapper{
     width: 100%;
     height: 35px;
     border-radius: 2px;
   }
+  .react-datepicker__input-container {
+    padding-top: 23px;
+  }
   .react-datepicker__input-container input {
       width: 100%;
-      height: 35px;
+      height: 45px;
       padding-right: 5px;
       border-radius: 2px;
       border: 1px solid var(--primaryColor);
@@ -61,17 +114,18 @@
   .ppl{
     width: 99%;
     margin-right: 0.5%;
-    height: 35px;
+    height: 45px;
     border-radius: 2px;
     border: 1px solid var(--primaryColor);
     background-color: var(--mainWhite);
     cursor: pointer;
+    margin-top: 23px;
   }
   .book{
       width: 99%;
-      height: 35px;
+      height: 45px;
       letter-spacing: var(--mainSpacing);
-      color: var(--mainBlack);
+      color:  rgb(0, 88, 139);
       background: var(--primaryColor);
       padding: 0.4rem 0.9rem;
       border: none;
@@ -81,48 +135,68 @@
       font-weight:600;
       margin-right: 0.5%;
       cursor: pointer;
+      margin-top: 23px;
   }
   .book:hover {
   box-shadow: 0 0.1em 0.9em -0.4em var(--mainWhite) ;
   transform: translateY(-0.03em);
   }
 /*מסך קטן*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
+  .best_price{
+    display: none;
+  }
+  .sbest_price{
+    display: flex;
+  }
+  .h1b, .comp {
+    display: inline-block;
+  }
   .book-now-comp{
     display: inline-block;
+    padding: 10px;
+    padding-top: 52px;
     margin:auto;
     width: 100%;
     height: 100%;
-    padding-top: 15px;
-  }
-  .book-now-comp h1{
-    padding-top: 0px;
+    right: 0px;
   }
   .ppl{  
     margin: 0.5vh;
     width: 41%;
+    margin-top: 2px;
+    height: 35px;
   }
   .react-datepicker-wrapper{
     margin: 0.5vh;
-    width: 37vh;
+    width: 40vh;
+  }
+  .react-datepicker-wrapper input{
+    height: 35px;
+  }
+  .react-datepicker__input-container {
+    padding-top: 0px;
   }
   .book{
     margin-top: 0.5vh;
+    height: 35px;
   }
 }
 @media screen and (max-width: 700px) {
   .react-datepicker-wrapper{
     width: 30vh;
   }
+  .sbest_price{
+    left: 36vw;
+  }
 }
 /*מחשב*/
 @media screen and (max-width: 560px) {
   .react-datepicker-wrapper{
-    width: 150px;
+    width: 151px;
   }
-  .book{
-    background: rgb(0, 88, 139);
-    color: var(--mainWhite);
+  .sbest_price{
+    left: 33vw;
   }
 }
 /*הטלפון שלי*/
@@ -141,17 +215,20 @@
 .languegus {
   color: #ecb80e;
   position: fixed;
-  top: 23px;
-  right: 48%;
+  top: 19px;
+  left: 70px;
   z-index: 1;
 }
 .languegus input{
 width: 7px;
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 970px) {
   .languegus {
-    left: 98%;
+    left: 4%;
   }
+}
+.lang{
+  direction: ltr;
 }
 
 /* services */
@@ -233,7 +310,7 @@ width: 7px;
 }
 /*לוגו העוגן*/
 .nav-logo {
-  margin-top: 2px;
+  margin-top: 0px;
   transition: var(--mainTransition);
 }
   .nav-logo:hover,
@@ -307,7 +384,7 @@ width: 7px;
 }
 
 /*מסך גדול */
-@media screen and (min-width: 910px) {
+@media screen and (min-width: 970px) {
   /*אייקון בין הכפתורי תפריט*/
 .anchor{
     height: 34px;
@@ -541,9 +618,6 @@ div{
   height: calc(100vh - 150px);
   background: center/cover no-repeat;
   will-change: opacity;
-  /* 
-  margin-right: 9vw;
-  margin-left: 9vw; */
 }
 .switch{
   display: flex;
@@ -583,19 +657,19 @@ div{
   margin: 1rem auto;
 }
 /*end of Banner */
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 800px) {
+  .banner {
+    padding: 0.5rem 1rem;
+    }
+  .banner p {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+  }
   .bg {
-    height: calc(100vh - 350px);
+    height: calc(390px);
   }
   .defaultHero, .roomsHero {
-    min-height: calc(100vh - 416px);
-  }
-  .banner {
-  padding: 0.5rem 1rem;
-  }
-  .banner p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    min-height: calc(327px);
   }
 }
 

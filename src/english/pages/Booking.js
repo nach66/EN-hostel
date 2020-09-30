@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer'
-import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
 import Title from '../components/Title';
 import Loading from '../components/Loading';
 import LangButtons from '../LangButtons'
+import { Link } from 'react-router-dom'
 
 export default class Booking extends Component{
 
@@ -29,25 +29,29 @@ export default class Booking extends Component{
             <>
                 <LangButtons {...this.props} />
                 <div className="sep"/>
-                    <section className="empty-services">
-                        <Title title="BOOK  YOUR STAY NOW ON OUR SITE!"/>
-                        <h6>For group reservations of 10 or more people, please contact us:</h6>
-                            <article>
-                                <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
-                                <h6>04-679-2611</h6>
-                            </article>
-                            <article>
-                                <a href={"mailto:tiberiashostel@gmail.com"} rel="noopener noreferrer" target="_blank">
-                                <FaEnvelope style={{ color:'#ebe050'}}/></a>
-                                <h6>tiberiashostel@gmail.com</h6>
-                            </article>
-                            <br/>
-                        </section>
+                        
+                    <div
+                        style={{
+                            padding: '0rem',
+                            textAlign: 'center',
+                            direction: 'ltr'
+                        }}
+                    >
+                        <h6>For group reservations of 10 or more people, please</h6>
+                        <Link 
+                                style={{
+                                    fontWeight: '600',
+                                    color: 'rgb(0, 88, 139)',
+                                    fontFamily: 'Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif'
+                                }}
+                                to="/en/contact" > contact us :) 
+                        </Link>
+                    </div>                    
 
                         {this.state.isloading && <Loading/>}
 
-                        <iframe id="be_iframe" frameborder="1" scrolling="yes" title="booking"
-                                    style={{width: '100%', height:'2700px', 
+                        <iframe id="be_iframe" frameborder="0.5" scrolling="yes" title="booking"
+                                    style={{width: '100%', height:'2850px', 
                                     padding:'30px', overflow: 'hidden'}}  
                                     onload="window.scrollTo(0,0)"
                                     src="https://minihotelpms.net/frame/reservas?hotelToken=a41ce7814d16061ac9a951e3bb1c534e||from=||to=||nAdults=1||nChilds=0||nBabies=0||start_date=||end_date=||language=EN||currency=ILS||rateCode=*ALL||roomId=||bloggerId=">

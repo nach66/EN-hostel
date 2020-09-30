@@ -21,7 +21,7 @@ export default function PrivateRooms(props) {
                         <div className="sep"/>
                         <Title title="Private rooms" />
                         <section className="empty-services">
-                            <h6 className="lang">Our private rooms can accommodate 2-4 people. In the private rooms the toilet and shower are ensuite.</h6>
+                            <h6 className="lang">Our private rooms can accommodate 1-4 people. In the private rooms the toilet and shower are ensuite.</h6>
                         </section>
                         <RoomsList rooms={privateRooms}/>
                         <ContactForm/>

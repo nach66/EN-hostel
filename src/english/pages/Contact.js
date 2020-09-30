@@ -9,6 +9,10 @@ export default function Contact(props) {
         return (
             <>
                 <LangButtons {...props} />
+                <div className="sbest_price"
+                    style={{
+                        zIndex: '1'
+                    }}/>
                 <br/>
                 <Search/>
                 <div className="sep"/>

@@ -53,59 +53,59 @@ export default class Search extends Component {
     render() {
         return (
             <>
-            <div className="comp">
-                <div className="book-now-comp">
-                    <h1>הזמינו חדר</h1>
-                    <div style={{position: 'relative', display: 'inline-block'}}>
-                        <DatePicker
-                            minDate={this.state.startDate}
-                            selected={this.state.startDate}
-                            onChange={this.handleChangeFrom}
-                            dateFormat="yyyy-MM-dd"
-                            name='from'
-                            popperModifiers={{
-                                offset: {
-                                    enabled: true,
-                                    offset: "-100px, 2px"
-                                }
-                            }}
-                        />
-                        </div>
+                <div className="comp">
+                <div className="best_price"/>
+                    <div className="book-now-comp">
                         <div style={{position: 'relative', display: 'inline-block'}}>
-                        <DatePicker
-                            selected={this.state.toDate}
-                            onChange={this.handleChangeTo}
-                            dateFormat="yyyy-MM-dd"
-                            name='to' 
-                            popperModifiers={{
-                                offset: {
-                                    enabled: true,
-                                    offset: "10px, 2px"
-                                }
-                            }}
-                        />
-                        </div>
-                        <select 
-                            defaultValue=""                            
-                            className="ppl" 
-                            onChange={this.handleChangeAdults} 
-                            name='nAdults'>
-                            <option disabled={true} value="">מבוגרים:</option>
-                            <option value='1'>1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option></select>
-                        <select 
-                            defaultValue=""
-                            className="ppl" 
-                            onChange={this.handleChangeChilds} 
-                            name='nChilds'>
-                        <option disabled={true} value="">ילדים:</option>
-                        <option value='0'>0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option></select>
-                    <input 
-                        className="book"
-                        type='submit'
-                        onClick={this.handleSubmit}
-                        value='הזמינו עכשיו'/>
+                                <DatePicker
+                                    minDate={this.state.startDate}
+                                    selected={this.state.startDate}
+                                    onChange={this.handleChangeFrom}
+                                    dateFormat="yyyy-MM-dd"
+                                    name='from'
+                                    popperModifiers={{
+                                        offset: {
+                                            enabled: true,
+                                            offset: "-100px, 2px"
+                                        }
+                                    }}
+                                />
+                            </div>
+                            <div style={{position: 'relative', display: 'inline-block'}}>
+                                <DatePicker
+                                    selected={this.state.toDate}
+                                    onChange={this.handleChangeTo}
+                                    dateFormat="yyyy-MM-dd"
+                                    name='to' 
+                                    popperModifiers={{
+                                        offset: {
+                                            enabled: true,
+                                            offset: "10px, 2px"
+                                        }
+                                    }}
+                                />
+                            </div>
+                            <select 
+                                defaultValue=""                            
+                                className="ppl" 
+                                onChange={this.handleChangeAdults} 
+                                name='nAdults'>
+                                <option disabled={true} value="">מבוגרים:</option>
+                                <option value='1'>1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option></select>
+                            <select 
+                                defaultValue=""
+                                className="ppl" 
+                                onChange={this.handleChangeChilds} 
+                                name='nChilds'>
+                            <option disabled={true} value="">ילדים:</option>
+                            <option value='0'>0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option></select>
+                        <input 
+                            className="book"
+                            type='submit'
+                            onClick={this.handleSubmit}
+                            value='הזמינו עכשיו'/>
+                    </div>
                 </div>
-            </div>
             </>
         );
     }
