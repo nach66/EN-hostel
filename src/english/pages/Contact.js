@@ -9,7 +9,7 @@ export default function Contact(props) {
         return (
             <>
                 <LangButtons {...props} />
-                <div className="sbest_price"
+                <div className="sbest_price_en"
                     style={{
                         zIndex: '1'
                     }}/>

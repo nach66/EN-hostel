@@ -22,6 +22,7 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+/*popup*/
 @keyframes customEnterAnimation {
   0% {
     transform: scale(0);
@@ -45,24 +46,9 @@
   max-width: 450px;
   width: 100%;
 }
+/*end of popup*/
 
-/*search*/
-.comp{
-  background-color: var(--mainGreen);
-  display: flex;
-  margin: auto;
-  width: 100%;
-}
-.h1b{
-  padding-top: 7px;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  display: none;
-  padding-right: 15px;
-  color:  rgb(0, 88, 139);
-  text-decoration: double;
-}
+/*עיגול של מחיר באתר*/
 .best_price{
   background-image: url("./images/icons/bb.png");
   background-size: cover;
@@ -83,6 +69,44 @@
   display: none;
 }
 
+.best_price_en{
+  background-image: url("./images/icons/en_bb.png");
+  background-size: cover;
+  position: relative;
+  height: 142px;
+  width: 160px;
+  left: 30px;
+  margin: 6px;
+}
+.sbest_price_en{
+  background-image: url("./images/icons/en_bb.png");
+  background-size: cover;
+  position: absolute;
+  height: 125px;
+  width: 137px;
+  top: 12px;
+  left: 39vw;
+  display: none;
+}
+/*סוף העיגול*/
+
+/*search*/
+.comp{
+  background-color: var(--mainGreen);
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+.h1b{
+  padding-top: 7px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  display: none;
+  padding-right: 15px;
+  color:  rgb(0, 88, 139);
+  text-decoration: double;
+}
 .book-now-comp{
     position: relative;
     padding-top: 12px;
@@ -143,11 +167,13 @@
   }
 /*מסך קטן*/
 @media screen and (max-width: 800px) {
-  .best_price{
-    display: none;
+ .best_price,
+    .best_price_en{
+      display: none;
   }
-  .sbest_price{
-    display: flex;
+  .sbest_price,
+    .sbest_price_en{
+      display: flex;
   }
   .h1b, .comp {
     display: inline-block;
@@ -186,7 +212,8 @@
   .react-datepicker-wrapper{
     width: 30vh;
   }
-  .sbest_price{
+  .sbest_price,
+  .sbest_price_en{
     left: 36vw;
   }
 }

@@ -56,7 +56,7 @@ export default class Home extends React.Component {
                     link="/en/rooms"
                     link_text="our rooms"
                 />
-                <div className="sbest_price"
+                <div className="sbest_price_en"
                     style={{
                         top: '310px',
                         left: '70%'

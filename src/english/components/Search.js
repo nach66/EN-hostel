@@ -54,8 +54,12 @@ export default class Search extends Component {
         return (
             <>
             <div className="comp">
-                <div className="best_price"/>
-                <div className="book-now-comp lang">
+                <div className="book-now-comp lang"
+                    style={{ 
+                        right: '0px',
+                        left: '50px'
+                    }}
+                >
                     <div style={{position: 'relative', display: 'inline-block'}}>
                         <DatePicker
                             minDate={this.state.startDate}
@@ -105,6 +109,7 @@ export default class Search extends Component {
                         onClick={this.handleSubmit}
                         value='book now'/>
                 </div>
+                <div className="best_price_en"/>
             </div>
             </>
         );
