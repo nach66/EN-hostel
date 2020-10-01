@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
   
 export default function Activity({activity}) {
     const {name,link,image,description} = activity;
-    console.log(description.content[0].content[0].value);
         return (
             <article className="activity">
                 <div className="img-container-activity">

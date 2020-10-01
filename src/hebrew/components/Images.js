@@ -11,7 +11,7 @@ const slides = [
     { id: 0, url: a },
     { id: 1, url: b },
     { id: 2, url: c },
-  ]
+]
 function Images (props) {
     const [index, set] = useState(0);
 

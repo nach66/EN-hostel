@@ -5,6 +5,7 @@ import About from '../components/About'
 import Gallerys from '../components/Gallerys'
 import Search from '../components/Search'
 import LangButtons from '../LangButtons'
+import Services from '../components/Services'
 
 export default function Aboutus(props) {
         return (
@@ -19,6 +20,7 @@ export default function Aboutus(props) {
                 <div className="sep"/>
                 <About/>
                 <div className="sep"/>
+                <Services/>
                 <Gallerys/>
                 <div className="sep"/>
                 <ContactForm/>

@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import About from '../components/About'
 import Gallerys from '../components/Gallerys'
 import Search from '../components/Search'
+import Services from '../components/Services'
 import LangButtons from '../LangButtons'
 
 export default function Aboutus(props) {
@@ -19,6 +20,7 @@ export default function Aboutus(props) {
                 <div className="sep"/>
                 <About/>
                 <div className="sep"/>
+                <Services/>
                 <Gallerys/>
                 <div className="sep"/>
                 <ContactForm/>

@@ -9,7 +9,7 @@ export default function Room({room}) {
         <article className="room">
             <div className="img-container">
                 <img src={images[0] || def} alt="single room" />
-                <Link to={`/rooms/${slug}`} 
+                <Link to={`/he/rooms/${slug}`} 
                 className="btn-primary2 room-link" >
                     לפרטים
                 </Link>           

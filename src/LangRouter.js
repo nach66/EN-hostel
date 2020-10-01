@@ -23,7 +23,6 @@ export default class LangRouter extends Component {
         }
     }        
     setLocale = (newLocale) => {
-        console.log('newLocale = ', newLocale);
         window.localStorage.setItem('locale', newLocale)
         this.setState({ locale: newLocale })
     }

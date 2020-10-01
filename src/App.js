@@ -2,8 +2,6 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import NavBar from "./hebrew/components/NavBar";
 import Activities from "./hebrew/pages/Activities";
-import PrivateRooms from "./hebrew/pages/PrivateRooms";
-import PublicRooms from "./hebrew/pages/PublicRooms";
 import SingleRoom from "./hebrew/pages/SingleRoom";
 import Location from "./hebrew/pages/Location";
 import Aboutus from "./hebrew/pages/Aboutus";
@@ -35,12 +33,6 @@ function App(props) {
                 <Route path={"/" + locale + "/rooms"} exact render={propRouter => 
                     <Rooms {...propRouter} {...props} />
                 } />                
-                <Route path={"/" + locale + "/public"} exact render={propRouter => 
-                    <PublicRooms {...propRouter} {...props} />
-                } />                
-                <Route path={"/" + locale + "/private"} exact render={propRouter => 
-                    <PrivateRooms {...propRouter} {...props} />
-                } />
                 <Route path={"/" + locale + "/Activities"} exact render={propRouter => 
                     <Activities {...propRouter} {...props} />
                 } />                

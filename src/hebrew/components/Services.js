@@ -8,28 +8,28 @@ export default class Servies extends Component {
         services: [
             {
                 icon:<FaUtensils/>,
-                title:"Equipped and homely shared kitchen"
+                title:"מטבח משותף מאובזר וביתי"
             },
             {
                 icon:<FaAngellist/>,
-                title:"Rooftop with stunning views"
+                title:"גג עם נוף לכנרת ולהרי הגולן"
             },
             {
                 icon:<FaRegSmileBeam/>,
-                title:"Awesome team"
+                title:"צוות אדיר"
             },
             {
                 icon:<FaMapMarked/>,
-                title:"Central location"
+                title:"מיקום מרכזי"
             }
         ]
     }
     render() {
         return (
             <>
-            <section className="empty-services lang">
-                <Title className="lang" title="So, how does it work?"/>
-                <h6 className="lang">We at the Tiberias Hostel offer modern and pleasant accommodation units, for travelers on a limited budget. With us you can enjoy a hang-out room with pool table, board games and puzzles, a TV lounge, and free Wi-Fi. Bars, restaurants and beaches are all nearby, and our great staff will always be able to recommend the best hiking trails in the area!</h6>
+            <section className="empty-services">
+                {/* <Title title="אז איך זה עובד?"/> */}
+                <h6>אנחנו באכסניית טבריה מציעים יחידות אירוח מודרניות ונעימות, למטיילים בתקציב מוגבל. תוכלו ליהנות אצלנו מחדר פנאי עם סנוקר, משחקי לוח ופאזלים, וטרקלין טלוויזיה. אינטרנט אלחוטי זמין בחינם בכל השטח. ברים, מסעדות וחופים נמצאים כולם בסביבה הקרובה, והצוות האדיר שלנו תמיד יוכל להמליץ לכם על המסלולים הטובים ביותר לטיולים באזור!</h6>
 
                 <div className="services-center">
                     {this.state.services.map(

@@ -2,8 +2,6 @@ import React from "react";
 import {Route, Switch} from "react-router-dom";
 import NavBar from "./english/components/NavBar";
 import Activities from "./english/pages/Activities";
-import PrivateRooms from "./english/pages/PrivateRooms";
-import PublicRooms from "./english/pages/PublicRooms";
 import SingleRoom from "./english/pages/SingleRoom";
 import Location from "./english/pages/Location";
 import Aboutus from "./english/pages/Aboutus";
@@ -35,12 +33,6 @@ function App(props) {
                 <Route path={"/" + locale + "/rooms"} exact render={propRouter => 
                     <Rooms {...propRouter} {...props} />
                 } />                
-                <Route path={"/" + locale + "/public"} exact render={propRouter => 
-                    <PublicRooms {...propRouter} {...props} />
-                } />                
-                <Route path={"/" + locale + "/private"} exact render={propRouter => 
-                    <PrivateRooms {...propRouter} {...props} />
-                } />
                 <Route path={"/" + locale + "/Activities"} exact render={propRouter => 
                     <Activities {...propRouter} {...props} />
                 } />                
