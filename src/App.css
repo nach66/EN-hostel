@@ -49,44 +49,44 @@
 /*end of popup*/
 
 /*עיגול של מחיר באתר*/
+
 .best_price{
-  background-image: url("./images/icons/bb.png");
+  background-image: url("./images/icons/bestp.png");
   background-size: cover;
   position: relative;
-  height: 142px;
-  width: 160px;
-  right: 40px;
-  margin: 6px;
-}
-.sbest_price{
-  background-image: url("./images/icons/bb.png");
-  background-size: cover;
-  position: absolute;
-  height: 125px;
-  width: 137px;
-  top: 12px;
-  left: 39vw;
-  display: none;
+  height: 160px;
+  width: 165px;
+  right: 1.5rem;
+  margin: 3px;
 }
 
 .best_price_en{
-  background-image: url("./images/icons/en_bb.png");
+  background-image: url("./images/icons/bestp_en.png");
   background-size: cover;
   position: relative;
-  height: 142px;
-  width: 160px;
-  left: 30px;
-  margin: 6px;
+  height: 160px;
+  width: 165px;
+  left: 1.5rem;
+  margin: 3px;
 }
-.sbest_price_en{
-  background-image: url("./images/icons/en_bb.png");
+.sbest_price{
+  background-image: url("./images/icons/bestp.png");
   background-size: cover;
   position: absolute;
-  height: 125px;
-  width: 137px;
-  top: 12px;
-  left: 39vw;
   display: none;
+  height: 155px;
+  width: 165px;
+  left: 38vw;
+  top: 2px;
+}.sbest_price_en{
+  background-image: url("./images/icons/bestp_en.png");
+  background-size: cover;
+  position: absolute;
+  display: none;
+  height: 155px;
+  width: 155px;
+  left: 38vw;
+  top: 2px;
 }
 /*סוף העיגול*/
 
@@ -94,37 +94,24 @@
 .comp{
   background-color: var(--mainGreen);
   display: flex;
-  margin: auto;
   width: 100%;
-}
-.h1b{
-  padding-top: 7px;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  display: none;
-  padding-right: 15px;
-  color:  rgb(0, 88, 139);
-  text-decoration: double;
+  margin-top: 17px;
 }
 .book-now-comp{
     position: relative;
     padding-top: 12px;
     height: 110px;
     width: 70%;
-    right: 15px;
     display: grid; 
     grid-column-gap: 1rem; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
     margin: auto;
   }
   .react-datepicker-wrapper{
     width: 100%;
     height: 35px;
     border-radius: 2px;
-  }
-  .react-datepicker__input-container {
-    padding-top: 23px;
+    margin-top: 23px;
   }
   .react-datepicker__input-container input {
       width: 100%;
@@ -167,62 +154,53 @@
   }
 /*מסך קטן*/
 @media screen and (max-width: 800px) {
- .best_price,
-    .best_price_en{
-      display: none;
+  .best_price, .best_price_en{
+    display: none;
   }
-  .sbest_price,
-    .sbest_price_en{
-      display: flex;
+  .sbest_price, .sbest_price_en{
+    display: flex;
   }
-  .h1b, .comp {
+  .comp {
     display: inline-block;
   }
   .book-now-comp{
     display: inline-block;
     padding: 10px;
-    padding-top: 52px;
-    margin:auto;
+    padding-top: 75px;
+    margin: auto;
     width: 100%;
     height: 100%;
     right: 0px;
   }
   .ppl{  
     margin: 0.5vh;
-    width: 41%;
+    width: 21.7vw;
     margin-top: 2px;
     height: 35px;
   }
   .react-datepicker-wrapper{
     margin: 0.5vh;
-    width: 40vh;
+    width: 21.8vw;
+    padding-top: 0px;
   }
   .react-datepicker-wrapper input{
     height: 35px;
-  }
-  .react-datepicker__input-container {
-    padding-top: 0px;
   }
   .book{
     margin-top: 0.5vh;
     height: 35px;
   }
 }
-@media screen and (max-width: 700px) {
-  .react-datepicker-wrapper{
-    width: 30vh;
-  }
-  .sbest_price,
-  .sbest_price_en{
-    left: 36vw;
+@media screen and (max-width: 640px) {
+  .sbest_price, .sbest_price_en{
+    left: 35.5vw;
   }
 }
 /*מחשב*/
 @media screen and (max-width: 560px) {
-  .react-datepicker-wrapper{
-    width: 151px;
-  }
   .sbest_price{
+    left: 32vw;
+  }.sbest_price_en{
     left: 33vw;
   }
 }
@@ -230,14 +208,23 @@
 @media screen and (max-width: 480px) {
   .react-datepicker-wrapper{
     width: 130px;
+  }.ppl{
+    width: 41%;
+  }
+  .sbest_price, .sbest_price_en{
+    left: 29vw;
   }
 }
 @media screen and (max-width: 380px) {
   .react-datepicker-wrapper{
     width: 110px;
   }
+  .sbest_price, .sbest_price_en{
+    left: 26vw;
+  }
 }
 /*end of search*/
+
 
 .languegus {
   color: #ecb80e;
@@ -632,9 +619,7 @@ div{
   margin: 100px;
   background-position-y: bottom;
 }
-
 /*end of gallery*/
-
 
 /*switch pictures hero*/
 .bg {
@@ -642,7 +627,7 @@ div{
   position: absolute;
   top: 0;
   width: 100vw;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 133px);
   background: center/cover no-repeat;
   will-change: opacity;
 }
@@ -656,16 +641,15 @@ div{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 216px);
+  min-height: calc(100vh - 214px);
 }
 .roomsHero {
   background-image: url("./images/def.jpg");
 }
 /* Banner */
 .banner {
-  padding: 1rem 2.5rem;
+  padding: 1rem;
   text-align: center;
-  padding-top: 10px;
   color: var(--mainWhite);
   background: rgba(0, 0, 0, 0.507);
   letter-spacing: var(--mainSpacing);
@@ -675,7 +659,7 @@ div{
 }
 .banner p {
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 .banner div {
   width: 7rem;
@@ -684,23 +668,18 @@ div{
   margin: 1rem auto;
 }
 /*end of Banner */
-@media screen and (max-width: 800px) {
-  .banner {
-    padding: 0.5rem 1rem;
-    }
+  @media screen and (max-width: 800px) {
   .banner p {
       font-size: 0.9rem;
       margin-bottom: 10px;
   }
   .bg {
-    height: calc(390px);
+    height: calc(408px);
   }
   .defaultHero, .roomsHero {
     min-height: calc(327px);
   }
 }
-
-
 
 /* Title */
 .section-title {

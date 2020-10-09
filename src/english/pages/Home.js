@@ -58,8 +58,8 @@ export default class Home extends React.Component {
                 />
                 <div className="sbest_price_en"
                     style={{
-                        top: '310px',
-                        left: '70%'
+                        top: '328px',
+                        left: '9vw'
                 }}/>
                 <Search/>
                 <div className="sep"/>

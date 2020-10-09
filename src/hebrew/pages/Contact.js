@@ -12,7 +12,6 @@ export default function Contact(props) {
                     style={{
                         zIndex: '1'
                     }}/>
-                <br/> 
                 <Search/>
                 <div className="sep"/>
                 <ContactForm/>

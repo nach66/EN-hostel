@@ -54,7 +54,7 @@ export default class Search extends Component {
         return (
             <>
                 <div className="comp">
-                <div className="best_price"/>
+                    <div className="best_price"/>
                     <div className="book-now-comp">
                         <div style={{position: 'relative', display: 'inline-block'}}>
                                 <DatePicker

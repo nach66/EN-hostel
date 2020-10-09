@@ -16,7 +16,7 @@ export default class RoomProvider extends Component {
     try {
       let response = await Client.getEntries({
         content_type: "en_room",
-        order:"sys.createdAt"
+        order:"fields.capacity"
       });
       console.log(response);
       let rooms = this.formatData(response.items);

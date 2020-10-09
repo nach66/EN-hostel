@@ -15,7 +15,6 @@ export default function Aboutus(props) {
                     style={{
                         zIndex: '1'
                     }}/>
-                <br/> 
                 <Search/>
                 <div className="sep"/>
                 <About/>
